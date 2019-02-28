@@ -3,8 +3,8 @@ var mysql = require('mysql');
 require("dotenv").config();
 var connection;
 
-if (process.env.port) {
-    connection = mysql.createConnection(process.env.port);
+if (process.env.PORT) {
+    connection = mysql.createConnection(process.env.PORT);
 } else {
     connection = mysql.createConnection({
     host:'localhost',
