@@ -3,11 +3,11 @@ var mysql = require('mysql');
 require("dotenv").config();
 var connection;
 
-if (process.env.PORT.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.PORT.JAWSDB_URL);
+if (process.env.PORT || JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.PORT || JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
-    host:'127.0.0.1',
+    host:'localhost',
     port: 3306,
     user: 'root',
     password:'Tew890!',
