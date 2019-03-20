@@ -4,7 +4,7 @@ var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
 
 var app = express();
-app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static('public'));
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -22,3 +22,4 @@ app.use('/',routes);
 
 var port = process.env.PORT || 8080;
 app.listen(port);
+console.log("localhost:" + port);

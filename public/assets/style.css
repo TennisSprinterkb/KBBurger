@@ -1,3 +1,8 @@
 body {
-    background: url('../assets/img/dynamic-style.png');
+    background-image:url('../assets/img/dynamic-style.png');
+}
+
+#kbburger {
+    max-width: 200px;
+    max-height: 200px;
 }
